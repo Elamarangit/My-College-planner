@@ -9,17 +9,34 @@ public class College{
 
 
 
-    public College(String col, double intuit){
+    public College(String col, boolean priv, int apps, int accs, int enrolled, double intuit){
         college = col;
+        isPrivate = priv;
+        application = apps;
+        acceptance = accs;
+        enroll = enrolled;
         inStatetuition = intuit;
+        outStatetuition = inStatetuition*1.65;
     }
 
     public String getCollege()
     { return college; }
 
-    public double getTuition()
+    public boolean getPrivateStatus()
+    { return isPrivate; }
+
+    public int getApplications()
+    { return application; }
+
+    public int getAcceptance()
+    { return acceptance; }  
+
+    public int getEnroll()
+    { return enroll; }
+
+    public double getInTuition()
     { return inStatetuition; }
 
-    public String toString()
-    { return college+" tuition is $"+ inStatetuition; }          
+    public double getOutTuition()
+    { return outStatetuition; }  
 }
