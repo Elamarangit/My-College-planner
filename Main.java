@@ -16,20 +16,17 @@ public class Main {
         BankAccount newUser = new BankAccount(userName, amountInbank);
         System.out.println("Hello "+newUser.getAccHolder()+", let's get you started!");
         boolean codeRunning = true;
+        System.out.println("Which college are you interested in? If you would like to see your balance: please type 'balance' or type 'e' to exit");
         while(codeRunning){
-            System.out.println("Which college are you interested in? If you would like to see your balance: please type 'balance' or type 'e' to exit");
             String response = in.nextLine();
-            if(response.equals("balance") || response.equals("Balance"));{
+            if(response.equals("balance") || response.equals("Balance")){
                 System.out.println(newUser.toString());
-
             }
-             if(response.equals("e") || response.equals("E")){
+            if(response.equals("e") || response.equals("E")){
                 System.out.println("Good luck for college!");
                 codeRunning = false;
             }       
-            else{
-                codeRunning = false;
-            }
+            
 
             
             
