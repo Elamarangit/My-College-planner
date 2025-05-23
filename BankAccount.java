@@ -23,9 +23,9 @@ public class BankAccount{
     public String getAccHolder(){
         return accountHolder;
     }
-
+ 
     public String toString(){
         return "Here's a quick summary of your bank account... " + "\n" + "Account name is: " +
-        accountHolder + "\n" + "Your current budget is " + "$" + budget;
+        accountHolder + "\n" + "Your current budget is " + "$" + String.format("%.2f", budget);
     }
 }
