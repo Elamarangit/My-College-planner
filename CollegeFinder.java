@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class CollegeFinder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String filePath = "colleges.csv"; // Path to your CSV file
+        String filePath = "/workspaces/My-College-planner/Most-Recent-Cohorts-Institution_05192025.csv"; // Path to your CSV file
         ArrayList<College> allColleges = CollegeDataParser.parseCollegeData(filePath);
 
         System.out.println("Welcome to the College Finder!");
