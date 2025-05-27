@@ -6,8 +6,6 @@ public class College {
     private int actScore;
     private double gpa;
 
-    ///workspaces/My-College-planner/Most-Recent-Cohorts-Institution_05192025.csv
-
     public College(String name, String state, double acceptanceRate, int satScore, int actScore, double gpa) {
         this.name = name;
         this.state = state;
@@ -17,7 +15,7 @@ public class College {
         this.gpa = gpa;
     }
 
-    // Getters and setters
+    
     public String getName() {
         return name;
     }

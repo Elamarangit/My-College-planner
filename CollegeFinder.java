@@ -4,18 +4,17 @@ import java.util.Scanner;
 public class CollegeFinder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String filePath = "Most-Recent-Cohorts-Institution_05192025.csv"; // Path to your CSV file
+        String filePath = "Most-Recent-Cohorts-Institution_05192025.csv"; 
         ArrayList<College> allColleges = CollegeDataParser.parseCollegeData(filePath);
 
-        System.out.println("Welcome to the College Finder!");
+        System.out.println("Welcome to the My College Planner!");
 
         boolean continueSearch = true;
 
         while (continueSearch) {
-            // Input: Preferred State
             String preferredState = "";
             while (true) {
-                System.out.print("\nPreferred State (or type 'any'): ");
+                System.out.print("Preferred State (or type 'any'): ");
                 preferredState = scanner.nextLine().trim();
                 if (!preferredState.isEmpty()) {
                     break;
@@ -23,7 +22,7 @@ public class CollegeFinder {
                 System.out.println("Invalid input. Please enter a state abbreviation or 'any'.");
             }
 
-            // Input: Max Acceptance Rate
+            
             double maxAcceptanceRate = -1;
             while (true) {
                 System.out.print("Maximum Acceptance Rate (0.0 - 1.0 or -1 for any): ");
@@ -36,7 +35,7 @@ public class CollegeFinder {
                 System.out.println("Invalid input. Please enter a decimal between 0.0 and 1.0 or -1.");
             }
 
-            // Input: Min SAT Score
+            
             int minSatScore = -1;
             while (true) {
                 System.out.print("Minimum SAT Score (or -1 for any): ");
@@ -49,7 +48,6 @@ public class CollegeFinder {
                 System.out.println("Invalid input. Please enter a number between 400 and 1600 or -1.");
             }
 
-            // Input: Min ACT Score
             int minActScore = -1;
             while (true) {
                 System.out.print("Minimum ACT Score (or -1 for any): ");
@@ -62,7 +60,6 @@ public class CollegeFinder {
                 System.out.println("Invalid input. Please enter a number between 1 and 36 or -1.");
             }
 
-            // Input: Min GPA
             double minGpa = -1;
             while (true) {
                 System.out.print("Minimum GPA (or -1 for any): ");
@@ -75,7 +72,7 @@ public class CollegeFinder {
                 System.out.println("Invalid input. Please enter a number between 0.0 and 4.0 or -1.");
             }
 
-            // Filter colleges
+            
             ArrayList<College> matchingColleges = new ArrayList<>();
             for (College college : allColleges) {
                 boolean matches = true;
@@ -101,17 +98,20 @@ public class CollegeFinder {
                 }
             }
 
-            // Display results
+            
             if (matchingColleges.isEmpty()) {
                 System.out.println("\nNo colleges match your preferences.");
-            } else {
+            } 
+            else 
+            {
                 System.out.println("\nMatching Colleges:");
-                for (College college : matchingColleges) {
+                for (College college : matchingColleges) 
+                {
                     System.out.println(college);
                 }
             }
 
-            // Ask if user wants to search again
+            
             String response;
             while (true) {
                 System.out.print("\nWould you like to search again? (yes/no): ");
@@ -125,7 +125,6 @@ public class CollegeFinder {
             continueSearch = response.equals("yes");
         }
 
-        System.out.println("\nThank you for using College Finder. Goodbye!");
-        scanner.close();
+        System.out.println("\nThank you for using My College Planner. Goodbye!");
     }
 }

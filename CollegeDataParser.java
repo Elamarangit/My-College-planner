@@ -9,18 +9,18 @@ public class CollegeDataParser {
         
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            // Skip the header line
+            
             br.readLine();
             
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
                 
-                // Extract relevant data from CSV
-                String name = values[3].replace("\"", ""); // INSTNM
-                String state = values[5].replace("\"", ""); // STABBR
+                //data from CSV
+                String name = values[3].replace("\"", ""); 
+                String state = values[5].replace("\"", ""); 
                 
-                // Handle acceptance rate (ADM_RATE)
-                double acceptanceRate = -1; // Default value if not available
+                // Handle acceptance rate 
+                double acceptanceRate = 1; // Default value if not available
                 if (!values[36].isEmpty() && !values[36].equals("NULL") && !values[36].equals("NA")) {
                     try {
                         acceptanceRate = Double.parseDouble(values[36]);
@@ -29,10 +29,10 @@ public class CollegeDataParser {
                     }
                 }
                 
-                // Handle SAT score (SAT_AVG)
+                // Handle SAT score 
                 int satScore = -1; // Default value if not available
                 if (values[52].isEmpty() || values[52].equals("NULL") || values[52].equals("NA")) {
-                    // If SAT_AVG is not available, try to calculate average from SATVRMID and SATMTMID
+                    // If sat avg is not available
                     if (!values[45].isEmpty() && !values[45].equals("NULL") && !values[45].equals("NA") &&
                         !values[46].isEmpty() && !values[46].equals("NULL") && !values[46].equals("NA")) {
                         try {
@@ -51,7 +51,7 @@ public class CollegeDataParser {
                     }
                 }
                 
-                // Handle ACT score (ACTCMMID)
+                // Handle ACT score 
                 int actScore = -1; // Default value if not available
                 if (!values[51].isEmpty() && !values[51].equals("NULL") && !values[51].equals("NA")) {
                     try {
@@ -61,7 +61,7 @@ public class CollegeDataParser {
                     }
                 }
                 
-                // GPA is not directly available in the dataset, so we'll set it to -1
+                // gpa is not directly available in the dataset
                 double gpa = -1;
                 
                 // Create College object and add to list
