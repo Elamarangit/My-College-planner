@@ -1,52 +1,34 @@
-public class College{
-    private String college;
-    private String isPrivate;
-    private String application;
-    private String acceptance;
-    private String enroll;
-    private String top10percent;
-    private String top25percent;
-    private String Fundergrads;
-    private String Pundergrads;
-    private String outState;
-    private String roomBoard;
-    private String books;
-    private String personel; 
-    private String Phds;
-    private String terminal;
-    private String sfratio;
-    private String percentage_alumni;
-    private String expemditure;
-    private String gradution;
+public class College {
+    private String name;
+    private String state;
+    private String control;
+    private String inStateTuition;
+    private String outStateTuition;
+    private String satVR25, satVR75, satMT25, satMT75;
+    private String actCM25, actCM75;
+    private String acceptanceRate;
+    private String studentBodySize;
 
-
-    // "","Private","Apps","Accept","Enroll","Top10perc","Top25perc","F.Undergrad","P.Undergrad","Outstate","Room.Board","Books","Personal","PhD","Terminal","S.F.Ratio","perc.alumni","Expend","Grad.Rate"
-    public College(){}
-
-    public College(String Fundergrads, String Phds, String Pundergrads, String acceptance, String application, String books, String college, String enroll, String expemditure, String gradution, String isPrivate, String outState, String percentage_alumni, String personel, String roomBoard, String sfratio, String terminal, String top10percent, String top25percent) {
-        this.Fundergrads = Fundergrads;
-        this.Phds = Phds;
-        this.Pundergrads = Pundergrads;
-        this.acceptance = acceptance;
-        this.application = application;
-        this.books = books;
-        this.college = college;
-        this.enroll = enroll;
-        this.expemditure = expemditure;
-        this.gradution = gradution;
-        this.isPrivate = isPrivate;
-        this.outState = outState;
-        this.percentage_alumni = percentage_alumni;
-        this.personel = personel;
-        this.roomBoard = roomBoard;
-        this.sfratio = sfratio;
-        this.terminal = terminal;
-        this.top10percent = top10percent;
-        this.top25percent = top25percent;
+    public College(String name, String state, String control,
+                   String inStateTuition, String outStateTuition,
+                   String satVR25, String satVR75,
+                   String satMT25, String satMT75,
+                   String actCM25, String actCM75,
+                   String acceptanceRate, String studentBodySize) {
+        this.name = name;
+        this.state = state;
+        this.control = control;
+        this.inStateTuition = inStateTuition;
+        this.outStateTuition = outStateTuition;
+        this.satVR25 = satVR25;
+        this.satVR75 = satVR75;
+        this.satMT25 = satMT25;
+        this.satMT75 = satMT75;
+        this.actCM25 = actCM25;
+        this.actCM75 = actCM75;
+        this.acceptanceRate = acceptanceRate;
+        this.studentBodySize = studentBodySize;
     }
 
-    
-
-
-
+    // Add getters or toString() if needed
 }
