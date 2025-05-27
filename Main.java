@@ -33,8 +33,10 @@ public class Main {
                 newUser.deposit(depositInput);
                 System.out.println("You have deposited " + "$" + depositInput + " into your account!");
                 System.out.println("Which collegeare you interested in? If you would like to see your balance: please type 'balance'" + "\n" +"Type 'deposit' if you want to add more money to your account" + "\n" + "Type 'e' to exit");
+            }
+            else{
+                System.out.println("I am so sorry! I do not know what are you talking about.");
             } 
-            
 
             
             
